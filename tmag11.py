@@ -93,21 +93,21 @@ class Tecmag():  # class ki komunicira z tnmr aplikacijo
                         if current == 'Acquisition':
                             if line == 'Grd. Orientation, \tXYZ\n':
                                 current = ''
-                            self.dict_Acquisition.update({line.split(',')[0].strip():line.split(',')[1].strip()})
+                            self.glavn_dikt.update({line.split(',')[0].strip():line.split(',')[1].strip()})
                         if current == 'Frequency':
-                            self.dict_Frequency.update({line.split(',')[0].strip():line.split(',')[1].strip()})
+                            self.glavn_dikt.update({line.split(',')[0].strip():line.split(',')[1].strip()})
                         if current == 'Processing':
-                            self.dict_Processing.update({line.split(',')[0].strip():line.split(',')[1].strip()})
+                            self.glavn_dikt.update({line.split(',')[0].strip():line.split(',')[1].strip()})
                         if current == 'GradPreemph':
-                            self.dict_GradPreemph.update({line.split(',')[0].strip():line.split(',')[1].strip()})
+                            self.glavn_dikt.update({line.split(',')[0].strip():line.split(',')[1].strip()})
                         if current == 'B0Compensation':
-                            self.dict_B0Compensation.update({line.split(',')[0].strip():line.split(',')[1].strip()})
+                            self.glavn_dikt.update({line.split(',')[0].strip():line.split(',')[1].strip()})
                         if current == 'Misc':
-                            self.dict_Misc.update({line.split(',')[0].strip():line.split(',')[-1].strip()})
+                            self.glavn_dikt.update({line.split(',')[0].strip():line.split(',')[-1].strip()})
                         if current == 'Display':
-                            self.dict_Display.update({line.split(',')[0].strip():line.split(',')[1].strip()})
+                            self.glavn_dikt.update({line.split(',')[0].strip():line.split(',')[1].strip()})
                         if current == 'Sequence':
-                            self.dict_Sequence.update({line.split(',')[0].strip():line.split(',')[1].strip()})
+                            self.glavn_dikt.update({line.split(',')[0].strip():line.split(',')[1].strip()})
         
         self.Get_parameterses()
         self.sequ = self.app.GetSequenceName
