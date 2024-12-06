@@ -1,0 +1,84 @@
+three_pulse_4
+Author: measurements@DESKTOP-HNI2M22 
+Rev: 0 
+Created: Thursday, August 29, 2024 13:12:09
+
+<No Comment>
+
+Event 1:	Ph rst
+	Delay:  5u
+	F1_PhRst:  1
+	F0_PhRst:  1
+	RX_Blank:  1
+	RX_PhRst:  1
+Event 2:	unblank
+	Delay:  (pre  = 3u)
+	F1_Ampl:  (a3  = 50)
+	F1_Atten:  (atn3  = 12)
+	F1_Ph:  1D table: ph3
+		0 0 2 2
+	F1_UnBlank:  1
+	RX_Blank:  1
+Event 3:	pulse 3
+	Delay:  (d3  = 1.7u)
+	F1_Ampl:  (a3  = 50)
+	F1_Atten:  (atn3  = 12)
+	F1_Ph:  1D table: ph3
+		0 0 2 2
+	F1_TxGate:  1
+	F1_UnBlank:  1
+	RX_Blank:  1
+Event 4:	delay
+	Delay:  (d5  = 100u)
+	RX_Blank:  1
+Event 5:	unblank
+	Delay:  (pre  = 3u)
+	F1_Ampl:  (a1  = 50)
+	F1_Atten:  (atn1  = 18)
+	F1_Ph:  1D table: ph1
+		0 1 2 3
+	F1_UnBlank:  1
+	RX_Blank:  1
+Event 6:	pulse 1
+	Delay:  (d1  = 1.7u)
+	F1_Ampl:  (a1  = 50)
+	F1_Atten:  (atn1  = 18)
+	F1_Ph:  1D table: ph1
+		0 1 2 3
+	F1_TxGate:  1
+	F1_UnBlank:  1
+	RX_Blank:  1
+Event 7:	delay
+	Delay:  (tau  = 15u)
+	RX_Blank:  1
+Event 8:	unblank
+	Delay:  (pre  = 3u)
+	F1_Ampl:  (a2  = 50)
+	F1_Atten:  (atn2  = 12)
+	F1_Ph:  1D table: ph2
+		1 2 1 2
+	F1_UnBlank:  1
+	RX_Blank:  1
+Event 9:	pulse 2
+	Delay:  (d2  = 1.7u)
+	F1_Ampl:  (a2  = 50)
+	F1_Atten:  (atn2  = 12)
+	F1_Ph:  1D table: ph2
+		1 2 1 2
+	F1_TxGate:  1
+	F1_UnBlank:  1
+	RX_Blank:  1
+Event 10:	ringdown
+	Delay:  (rd  = 7u)
+	RX_Blank:  1
+Event 11:	acq delay
+	Delay:  (ad  = 1u)
+Event 12:	acquire
+	Delay:  (Acq. Time  = 102.4u)
+	Acq:  1
+	Acq_phase:  1D table: ph0
+		0 1 2 3
+Event 13:	last delay
+	Delay:  (Last Delay  = 1.5s)
+Event 14:	
+	Delay:  1u

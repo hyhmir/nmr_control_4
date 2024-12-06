@@ -1,0 +1,64 @@
+two_pulse
+Author: measurements@DESKTOP-D4HQQ8Q 
+Rev: 0 
+Created: Wednesday, April 24, 2019 16:20:04
+
+<No Comment>
+
+Event 1:	Ph rst
+	Delay:  5u
+	F1_PhRst:  1
+	F0_PhRst:  1
+	RX_Blank:  1
+	RX_PhRst:  1
+Event 2:	unblank
+	Delay:  (pre  = 3u)
+	F1_Ampl:  (a1  = 40)
+	F1_Atten:  (atn1  = 7)
+	F1_Ph:  1D table: ph1
+		0 2 0 2  1 3 1 3  2 0 2 0  3 1 3 1
+	F1_UnBlank:  1
+	RX_Blank:  1
+Event 3:	pulse 1
+	Delay:  (d1  = 3u)
+	F1_Ampl:  (a1  = 40)
+	F1_Atten:  (atn1  = 7)
+	F1_Ph:  1D table: ph1
+		0 2 0 2  1 3 1 3  2 0 2 0  3 1 3 1
+	F1_TxGate:  1
+	F1_UnBlank:  1
+	RX_Blank:  1
+Event 4:	delay
+	Delay:  (tau  = 35u)
+	RX_Blank:  1
+Event 5:	unblank
+	Delay:  (pre  = 3u)
+	F1_Ampl:  (a2  = 40)
+	F1_Atten:  (atn2  = 7)
+	F1_Ph:  1D table: ph2
+		1 1 0 0  2 2 1 1  3 3 2 2  0 0 3 3
+	F1_UnBlank:  1
+	RX_Blank:  1
+Event 6:	pulse 2
+	Delay:  (d2  = 3u)
+	F1_Ampl:  (a2  = 40)
+	F1_Atten:  (atn2  = 7)
+	F1_Ph:  1D table: ph2
+		1 1 0 0  2 2 1 1  3 3 2 2  0 0 3 3
+	F1_TxGate:  1
+	F1_UnBlank:  1
+	RX_Blank:  1
+Event 7:	ringdown
+	Delay:  (rd  = 3u)
+	RX_Blank:  1
+Event 8:	acq delay
+	Delay:  (ad  = 15u)
+Event 9:	acquire
+	Delay:  (Acq. Time  = 204.8u)
+	Acq:  1
+	Acq_phase:  1D table: ph0
+		0 2 2 0  1 3 3 1  2 0 0 2  3 1 1 3
+Event 10:	last delay
+	Delay:  (Last Delay  = 50m)
+Event 11:	
+	Delay:  1u
