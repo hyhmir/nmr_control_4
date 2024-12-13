@@ -53,10 +53,11 @@ class Tecmag():  # class ki komunicira z tnmr aplikacijo
 
     def set_params(self):
         self.params = {}
-        self.params.update(self.dict_Acquisition)
-        self.params.update(self.dict_Frequency)
-        self.params.update(self.dict_Misc)
-        self.params.update(self.dict_Sequence)
+        self.params.update(self.glavn_dikt)
+        # self.params.update(self.dict_Acquisition)
+        # self.params.update(self.dict_Frequency)
+        # self.params.update(self.dict_Misc)
+        # self.params.update(self.dict_Sequence)
 
     def Parameter_setup(self, pulse=os.getcwd() + '\\pulse\\two_pulse.tps'):  # iz nastavljenega dashborda na tnmr ustvari tudi tu dashbord
         # pulse_path = 'D:\\TNMR\\sequences\\samo-test\\'  # treba sprement v gumb za search
@@ -157,10 +158,10 @@ class Tecmag():  # class ki komunicira z tnmr aplikacijo
         date = self.app.GetNMRParameter('Date')
         date = '.'.join(reversed(date.split(' ')[0].split('/')))
 
-        self.dict_Misc['Date'] = date
-        self.dict_Misc['Exp. Start Time'] = start
-        self.dict_Misc['Exp. Finish Time'] = finish
-        self.dict_Misc['Temp.'] = gui.getT()
+        self.glavn_dikt['Date'] = date
+        self.glavn_dikt['Exp. Start Time'] = start
+        self.glavn_dikt['Exp. Finish Time'] = finish
+        self.glavn_dikt['Temp.'] = gui.getT()
 
     def Get_parameterses(self):
         start = self.app.GetNMRParameter('Exp. Start Time')[-8:]
@@ -168,6 +169,6 @@ class Tecmag():  # class ki komunicira z tnmr aplikacijo
         date = self.app.GetNMRParameter('Date')
         date = '.'.join(reversed(date.split(' ')[0].split('/')))
 
-        self.dict_Misc['Date'] = date
-        self.dict_Misc['Exp. Start Time'] = start
-        self.dict_Misc['Exp. Finish Time'] = finish
+        self.glavn_dikt['Date'] = date
+        self.glavn_dikt['Exp. Start Time'] = start
+        self.glavn_dikt['Exp. Finish Time'] = finish
